@@ -63,7 +63,7 @@ const BodySector = () => {
 
   return (
     <>
-      <Flex justify="space-between" gap="20px">
+      <Flex justify="space-between" gap="20px" p="10px">
         <Box mt="20px">
           <Text fontWeight="bold" fontSize="20px" mb="20px">
             Anylatics
@@ -71,7 +71,7 @@ const BodySector = () => {
           <Box
             display="flex"
             flexDirection="column"
-            boxShadow="2xl"
+            boxShadow="xl"
             borderRadius="10px"
             p="3"
             rounded="md"

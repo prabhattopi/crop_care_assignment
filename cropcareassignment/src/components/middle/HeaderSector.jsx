@@ -5,9 +5,9 @@ import BodySector from './BodySector'
 import LowerSector from './LowerSector'
 const HeaderSector = () => {
   return (
-    <Stack borderRight="1px solid black" flex="2">
-    <Box display="flex" justifyContent="space-between" mt="20px" mr="20px">
-        <Box>
+    <Stack borderRight="1px solid black"  borderLeft="1px solid black" flex="2">
+    <Box display="flex" justifyContent="space-between" mt="20px" mr="20px" p="10px">
+        <Box >
         <Text w="300px" fontSize="30px">
             Hello John 👋
        </Text>

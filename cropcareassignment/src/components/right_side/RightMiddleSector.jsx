@@ -65,7 +65,7 @@ const RightMiddleSector = () => {
       <Box
         display="flex"
         flexDirection="column"
-        boxShadow="2xl"
+        boxShadow="xl"
         borderRadius="10px"
         p="3"
         rounded="md"

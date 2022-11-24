@@ -7,7 +7,7 @@ import RightMiddleSector from './RightMiddleSector'
 import RightLower from './RightLower'
 const RightHeaderSector = () => {
   return (
-    <Stack flex="1">
+    <Stack display="flex" gap="30px" flex="1">
 <Box display="flex">
     <Box></Box>
    <Spacer/>

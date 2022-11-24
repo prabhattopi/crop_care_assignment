@@ -9,12 +9,12 @@ import React from "react";
 const Navbar = () => {
   return (
     <HStack
-      width="230px"
+      width="180px"
       height="100%"
       display="flex"
       align="flex-start"
       bg="white"
-      borderRight="1px solid black"
+     
     >
       <Flex direction="column" color="black">
         <Text
