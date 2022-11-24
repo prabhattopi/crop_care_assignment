@@ -4,6 +4,8 @@ import {CiSettings} from "react-icons/ci"
 import {MdOutlineMessage} from "react-icons/md"
 import {FiHelpCircle} from "react-icons/fi"
 import {GoFile} from "react-icons/go"
+import {RiLogoutBoxRLine} from "react-icons/ri"
+import {CiBadgeDollar} from "react-icons/ci"
 import React from "react";
 
 const Navbar = () => {
@@ -14,6 +16,7 @@ const Navbar = () => {
       display="flex"
       align="flex-start"
       bg="white"
+      mt="30px"
      
     >
       <Flex direction="column" color="black">
@@ -64,7 +67,7 @@ const Navbar = () => {
             width="100%"
             height="60px"
           >
-            <Icon ml="10px" fontSize="20px"></Icon>
+            <Icon ml="10px" fontSize="20px" as={CiBadgeDollar}></Icon>
             <Text fontSize="20px">Payout</Text>
           </Flex>
           <Flex
@@ -107,6 +110,16 @@ const Navbar = () => {
           >
             <Icon ml="10px" fontSize="20px" as={CiSettings}></Icon>
             <Text fontSize="20px">Settings</Text>
+          </Flex>
+          <Flex
+            gap="20px"
+            align="center"
+            _hover={{ bg: "cyan.500", borderRadius: "5px" }}
+            width="100%"
+            height="60px"
+          >
+            <Icon ml="10px" fontSize="20px" as={RiLogoutBoxRLine}></Icon>
+            <Text fontSize="20px">Logout</Text>
           </Flex>
         </Flex>
       </Flex>

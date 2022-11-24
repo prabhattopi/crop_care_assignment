@@ -1,4 +1,4 @@
-import { Box,Text,Input,InputGroup,InputLeftElement,Stack } from '@chakra-ui/react'
+import { Box,Text,Input,InputGroup,InputLeftElement,Stack, Spacer } from '@chakra-ui/react'
 import React from 'react'
 import {BsSearch} from "react-icons/bs"
 import BodySector from './BodySector'
@@ -11,8 +11,10 @@ const HeaderSector = () => {
         <Text w="300px" fontSize="30px">
             Hello John 👋
        </Text>
+
         </Box>
-      
+        <Spacer/>
+    <Box>
     <InputGroup>
      <InputLeftElement
       pointerEvents='none'
@@ -20,7 +22,7 @@ const HeaderSector = () => {
     />
     <Input w="250px" type='text' placeholder='Search' />
   </InputGroup>
-
+  </Box>
     </Box>
     <BodySector/>
     <LowerSector/>

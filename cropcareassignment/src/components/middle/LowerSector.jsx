@@ -42,6 +42,7 @@ const LowerSector = () => {
 
   const options = {
     responsive: true,
+    aspectMaintainRatio:false
   };
 
   console.log(coinChartData);
@@ -110,7 +111,7 @@ const LowerSector = () => {
                 data2.map(e=>(
                   <Box
                   key={e.id}
-                boxShadow="xl"
+                boxShadow="m"
                 borderRadius="5px"
                 display="flex"
                 justifyContent="space-between"
@@ -122,12 +123,12 @@ const LowerSector = () => {
                     height="50px"
                     width="50px"
                     overflow="hidden"
-                    borderRadius="20px"
+                    borderRadius="10px"
                     border="1px solid white"
                   >
                     <Image
-                      borderRadius="20px"
-                      objectFit="cover"
+                      borderRadius="10px"
+                      objectFit="contain"
                       width="100%"
                       height="100%"
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSblQ39R7clUseJbQEuw2p1-i7mI-Ygqb6opQ&usqp=CAU"
@@ -164,7 +165,7 @@ const LowerSector = () => {
           <Box
             display="flex"
             flexDirection="column"
-            boxShadow="2xl"
+            boxShadow="xl"
             borderRadius="10px"
             p="3"
             rounded="md"
