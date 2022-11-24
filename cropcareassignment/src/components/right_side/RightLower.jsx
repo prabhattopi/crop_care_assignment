@@ -48,7 +48,7 @@ const RightLower = () => {
           </Box>
           <Box display="flex" justifyContent="space-between" alignItems="center" gap="5px">
             <Text fontSize="30px" fontWeight="bold">$450</Text>
-            <Box bg="rgb(16,69,255)" p="5px 20px" borderRadius="15px">
+            <Box bg="rgb(16,69,255)" p="5px 20px" borderRadius="15px"  cursor="pointer">
               <Text fontSize="14px" color="white">
                 Transfer
               </Text>

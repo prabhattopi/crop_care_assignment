@@ -17,6 +17,7 @@ const Navbar = () => {
       align="flex-start"
       bg="white"
       mt="30px"
+      cursor="pointer"
      
     >
       <Flex direction="column" color="black">

@@ -12,9 +12,9 @@ const RightHeaderSector = () => {
     <Box></Box>
    <Spacer/>
    <Box display="flex" gap="20px"  mt="20px" mr="20px" alignItems="center">
-  <FiInbox fontSize="30px"/>
-  <MdOutlineMail fontSize="30px"/>
-  <FaRegUserCircle fontSize="30px"/>
+  <FiInbox cursor="pointer" fontSize="30px"/>
+  <MdOutlineMail cursor="pointer" fontSize="30px"/>
+  <FaRegUserCircle cursor="pointer" fontSize="30px"/>
    </Box>
 
    </Box>

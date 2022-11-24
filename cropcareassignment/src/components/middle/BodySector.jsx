@@ -44,6 +44,7 @@ const BodySector = () => {
     
     
     responsive: true,
+    
 
   };
 
@@ -69,6 +70,7 @@ const BodySector = () => {
             Anylatics
           </Text>
           <Box
+           cursor="pointer"
             display="flex"
             flexDirection="column"
             boxShadow="xl"

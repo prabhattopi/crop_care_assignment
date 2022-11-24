@@ -110,6 +110,7 @@ const LowerSector = () => {
               {
                 data2.map(e=>(
                   <Box
+                  cursor="pointer"
                   key={e.id}
                 boxShadow="m"
                 borderRadius="5px"
@@ -163,6 +164,7 @@ const LowerSector = () => {
             Recent Transactions
           </Text>
           <Box
+           cursor="pointer"
             display="flex"
             flexDirection="column"
             boxShadow="xl"
