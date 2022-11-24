@@ -41,7 +41,10 @@ const BodySector = () => {
   }));
 
   const options = {
+    
+    
     responsive: true,
+
   };
 
   console.log(coinChartData);
@@ -69,6 +72,7 @@ const BodySector = () => {
             display="flex"
             flexDirection="column"
             boxShadow="2xl"
+            borderRadius="10px"
             p="3"
             rounded="md"
             bg="white"
@@ -90,6 +94,8 @@ const BodySector = () => {
                   Income
                 </Text>
               </Box>
+              <Box display="flex" alignItems="center" gap="10px">
+                <Text>Sort By</Text>
               <Box
                 display="flex"
                 alignItems="center"
@@ -113,8 +119,9 @@ const BodySector = () => {
                   <BiUpArrowAlt color="white" />
                 )}
               </Box>
+              </Box>
             </Box>
-            <Line options={options} data={data} />
+            <Line height={200} options={options} data={data} />
           </Box>
         </Box>
         <Box mt="20px">

@@ -1,5 +1,8 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
+import useAxios from "../../hooks/useAxios";
+import { BiDownArrowAlt, BiUpArrowAlt } from "react-icons/bi";
+
 import moment from "moment";
 import {
   Chart as ChartJS,
@@ -25,53 +28,45 @@ ChartJS.register(
   Legend
 );
 const LowerSector = () => {
-  const coinChartData = [
-    [1, 2],
-    [3, 4],
-    [5, 6],
-    [5, 6],
-    [5, 6],
-    [5, 6],
-    [5, 6],
-    [5, 6],
-  ].map((value) => ({
+  const [sorting, setSorting] = useState(false);
+  const { response } = useAxios(
+    `/coins/bitcoin/market_chart?vs_currency=usd&days=7`
+  );
+  if (!response) {
+    return <div>...Loading</div>;
+  }
+  let coinChartData = response.prices.map((value) => ({
     x: value[0],
     y: value[1].toFixed(2),
   }));
-  // console.log(coinChartData)
+
   const options = {
     responsive: true,
   };
+
+  console.log(coinChartData);
   const data = {
     labels: coinChartData.map((value) => moment(value.x).format("MMM DD")),
     datasets: [
       {
         fill: true,
-        label: "month",
+        label: "bitcoin",
         data: coinChartData.map((value) => value.y),
-        borderColor: "rgb(53, 162, 235)",
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        borderColor: "rgb(16,69,255)",
+        backgroundColor: "rgb(146,150,255)",
       },
     ],
   };
+
   return (
     <>
       <Flex justify="space-between" gap="20px">
-        <Box mt="20px">
-          <Text fontWeight="bold" fontSize="20px" mb="20px">
-            Anylatics
-          </Text>
-          <Box boxShadow="2xl" p="3" rounded="md" bg="white" h="300px">
-            <Line options={options} data={data} />
-          </Box>
-        </Box>
         <Box mt="20px">
           <Text fontWeight="bold" fontSize="20px" mb="20px">
             Reminder
           </Text>
           <Box
             p="10px"
-            mr="20px"
             w="230px"
             h="310px"
             bg="#1045ff"
@@ -116,6 +111,56 @@ const LowerSector = () => {
                 Set as Reminder
               </Button>
             </Box>
+          </Box>
+        </Box>
+        <Box mt="20px">
+          <Text fontWeight="bold" fontSize="20px" mb="20px">
+            Recent Transactions
+          </Text>
+          <Box
+            display="flex"
+            flexDirection="column"
+            boxShadow="2xl"
+            borderRadius="10px"
+            p="3"
+            rounded="md"
+            bg="white"
+            h="310px"
+            mr="10px"
+          >
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              mb="10px"
+              flexDirection="column"
+            >
+              <Box>
+                <Text fontSize="12px" color="gray.400">
+                  Accounts reached
+                </Text>
+              </Box>
+              <Box>
+                <Text fontSize="25px" fontWeight="bold">
+                  11,756
+                </Text>
+              </Box>
+              <Box display="flex" alignItems="center" gap="20px">
+                <Text fontSize="15px" color="gray.400">
+                  Day
+                </Text>
+                <Text fontSize="15px" color="gray.400">
+                  Week
+                </Text>
+                <Text fontSize="15px" color="gray.400">
+                  Month
+                </Text>
+                <Text fontSize="15px" color="gray.400">
+                  Year
+                </Text>
+              </Box>
+            </Box>
+            <Line height={200} options={options} data={data} />
           </Box>
         </Box>
       </Flex>
